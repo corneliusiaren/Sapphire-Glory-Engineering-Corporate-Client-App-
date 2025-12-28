@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+class AppTheme {
+  static ThemeData lightTheme = ThemeData(
+    primaryColor: Color(0xFF0B3C5D),
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Color(0xFF0B3C5D),
+      foregroundColor: Colors.white,
+    ),
+  );
+}
+
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Sapphire Glory Engineering"),
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(16),
+        children: [
+          Text(
+            "Structural Design • Construction • Consultancy",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 20),
+          DashboardCard(
+            title: "Request a Service",
+            icon: Icons.assignment,
+          ),
+          DashboardCard(
+            title: "View Projects",
+            icon: Icons.apartment,
+          ),
+          DashboardCard(
+            title: "Sustainability Tools",
+            icon: Icons.eco,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DashboardCard extends StatelessWidget {
+  final String title;
+  final IconData icon;
+
+  DashboardCard({required this.title, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Icon(icon, color: Color(0xFF0B3C5D)),
+        title: Text(title),
+        trailing: Icon(Icons.arrow_forward_ios),
+      ),
+    );
+  }
+}
