@@ -1,0 +1,26 @@
+flutter create sapphire_glory_app
+cd sapphire_glory_app
+
+lib/
+ ├── main.dart
+ ├── core/
+ │    ├── theme.dart
+ │    ├── constants.dart
+ ├── auth/
+ │    ├── login_screen.dart
+ │    ├── register_screen.dart
+ ├── home/
+ │    ├── home_screen.dart
+ │    ├── widgets/
+ ├── services/
+ │    ├── services_screen.dart
+ ├── projects/
+ │    ├── projects_screen.dart
+ ├── requests/
+ │    ├── request_form.dart
+ ├── sustainability/
+ │    ├── sustainability_screen.dart
+ ├── admin/
+ │    ├── admin_dashboard.dart
+ └── shared/
+      ├── custom_button.dart
